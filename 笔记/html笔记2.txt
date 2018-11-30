@@ -1,0 +1,96 @@
+标签的分类：标签在页面中的呈现效果分类：
+一.行内元素
+行内元素定义：在一行内显示，不可以设置宽高。 只能设置左右间距，不能设置上下间距。
+举例：span del i em b strong a......标签
+二.块元素
+块元素定义：可以设置宽高，独占一行。
+举例:div 标题标签  列表标签  段落标签(p  pre)..... 
+三.行内块元素
+行内块元素定义：可以设置宽高，在一行内显示。
+举例：img   表单控键.....
+
+<img src="引入地址" alt="失败提示语" title="天气logo">
+		title:标题
+	<a href="" title="天气"  target="_blank"></a>
+		target:用来控制新页面打开的位置
+				_self:在本窗口打开（默认值）
+				_blank:在新窗口打开
+元素的转换
+转换为块元素：  display:block;
+行内元素：     display:inline;
+行内块元素：    display:inline-block;
+
+元素级别：块元素>行内块元素>行内元素
+
+元素嵌套的规范
+1.同一级别可以相互嵌套
+2.级别高的元素可以嵌套级别低的元素
+3.段落标签只能嵌套行内元素
+4.a标签不能嵌套a标签
+
+每个标签均是盒子模型:四部分组成
+1.margin   外间距  盒子与盒子之间的距离
+2.border    边框    
+3.padding  内填充（内间距）   边框与内容之间的距离
+4.content  内容
+值的设定：
+外间距margin-top/margin-right/margin-bottom/margin-left
+简写：margin:50px;  上右下左均为50px       
+          margin:50px 100px;   上下50  左右100
+          margin:0 auto;   auto自动
+          margin:50px 100px 150px;  上50  左右100  下150
+          margin:50px 100px 150px 200px   上右下左
+边框：border:1px solid red;   border-top/right/bottom/left
+内填充：设定方法同margin
+内容：width:   数值  百分比  auto(默认值)参照于父元素的宽度
+		  height:   数值  百分比   auto（默认值）参照于内容 的高度      （只是内容的宽和高）
+一个元素实际的宽和高
+实际宽度=border-left+padding-left+width+padding-right+border-right;
+实际高度=border-top+padding-top+height+padding-bottom+border-bottom;
+盒子模型的问题：
+1.大部分元素的margin   padding默认值伪0，但是有一些元素的margin  padding不为0，比如body  标题标签  列表标签  段落标签
+2.相邻的两个块元素的margin会重合。值会取最大值。
+3.margin值可以设置负数，padding值不可以。
+4.行内元素margin值只有左右没有上下。
+*5.两个发生嵌套关系的元素，如果父元素没有上边框、上padding、父元素与子元素之间没有别的内容，此时子元素margin-top会作用到父元素身上。  解决·方法：（1）用父元素的padding-top值代替子元素margin-top值。（步骤1：给父元素加padding值 2：给父元素加box-sizing:  3:取消子元素的margin值）
+						（2）给父元素添加overflow:hidden;
+
+后代选择器
+语法：
+.E1 .E2｛｝
+作用：选择E1的后代E2。
+
+通用选择器：作用：选择所有元素
+*｛
+
+｝
+
+布局：
+第一步：清楚默认样式
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/* 清楚列表样式 */
+}
+a{
+	text-decoration: none;
+	/* 清楚a连接下划线 */
+}
+img{
+	display: block;
+	/* 图片转化为块元素 */
+}
+第二步：划分模块
+第三步：设置模块的大小以及位置
+第四步：划分下一级模块
+盒子模型的问题：
+1.大部分元素的margin   padding默认值伪0，但是有一些元素的margin  padding不为0，比如body  标题标签  列表标签  段落标签
+2.相邻的两个块元素的margin会重合。值会取最大值。
+3.margin值可以设置负数，padding值不可以。
+4.行内元素margin值只有左右没有上下。
+*5.两个发生嵌套关系的元素，如果父元素没有上边框、上padding、父元素与子元素之间没有别的内容，此时子元素margin-top会作用到父元素身上。  解决·方法：（1）用父元素的padding-top值代替子元素margin-top值。
+						（2）给父元素添加overflow:hidden;
+
+
+

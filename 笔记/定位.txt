@@ -1,0 +1,54 @@
+定位：
+定位的元素脱离文档层，到达定位层，层级高于浮动层。
+定位的元素会多处五个样式：top  right  bottom  left  z-index(层级)
+一.方式：
+1.相对定位
+相对于自身定位，在文档层保留原来的位置。
+position:relative;
+2.绝对定位
+相对于最近的、定位的、祖先元素来定位。完全脱离文档流(在文档层不保留原来的位置)。
+position:absolute;
+3.固定定位
+相对于浏览器的四条边。完全脱离文档流(在文档层不保留原来的位置)。
+position:fixed;
+
+z-index表示层级
+
+top与bottom同时定义哪个样式的权重高就会作用那个样式
+top的权重比bottom大
+left的权重比right大
+
+定位元素居中方式
+1.水平居中：
+  left:50% 
+  margin:-width/2;
+2.垂直居中：
+  top:50%;
+  margin-top:height/2;
+3.绝对居住：
+  left:50% 
+  margin:-width/2;
+  top:50%;
+  margin-top:height/2;
+  
+ 不需计算的方式
+ 1.水平居中：
+   left:0;
+   right:0;
+   margin:0 auto;
+ 2.垂直居中：
+   top:0;
+   bottom:0;
+   margin:auto 0;
+3.绝对居住：
+   left:0;
+   right:0;
+   top:0;
+   bottom:0;
+   margin:auto auto;
+   
+   
+   opacity:0~1;  定义透明度    整个块都透明
+
+文本溢出（多行，单行）：
+	

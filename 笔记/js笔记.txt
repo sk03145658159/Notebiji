@@ -1,0 +1,21 @@
+Typora markdown
+JS  javascript
+
+组成：
+	1.ECMAscript 基础语法：变量  数据类型  运算符  数组 函数  对象
+	2.BOM 浏览器对象模型
+		window对象  history对象 location对象
+	3.DOM 文档对象模型
+		元素获取 操作属性 操作央视样式  节点 事件  事件对象
+作用：
+	1.数据验证
+	2.动态的创建和删除元素
+	3.操作元素的内容和样式
+	4.模拟动画
+	5.创建cookie
+	6.ajax
+	7.json格式的数据处理
+特征：
+	客户端脚本语言，实现用户交互。
+      基于对象和事件驱动的松散型解释型语言
+@import url('base.css');

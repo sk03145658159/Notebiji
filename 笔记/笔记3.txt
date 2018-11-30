@@ -1,0 +1,63 @@
+cursor:pointer;    鼠标样式：手型   cursor: not-allowed;  鼠标样式：禁止
+box-shadow: 0 10px 10px 0 black ;   增加阴影样式（x轴偏移量  y轴偏移量  阴影的模糊程度   阴影的大小  阴影的颜色）inset加入内阴影
+css中颜色的表示方式
+1.预定义颜色    red  pink  blue  yellow
+2.#六位数的色值    #000000
+3.rgb()     rgb([0-255] ,[0-255], [0-255])     分别对应红色  绿色  蓝色
+4.rgba(红色，绿色，蓝色，透明度)     
+	rgb([0-255],[0-255],[0-255],[0-1])   
+
+2D/3D  效果
+平移：transform:translate(x轴偏移量，y轴偏移量)     transform:translatex()  定义X轴的偏移量
+	                      rotate()  旋转     180deg    transform-origin定义旋转原点
+	                      scale()    缩放    scale(x轴缩放倍数 ，y轴缩放倍数)  1为原倍数      scale(2) x y同时缩放2倍
+	                      skew()    斜切    skew()
+多个效果可以同时使用   transform:translate() rotate() ;
+旋转：
+	transform:rotate(旋转度数deg)；
+
+过渡：
+transition:all 0.5s;
+ transition-property:  样式1，样式2;     表明需要过渡的样式
+ transition-duration: 5s;  过渡的时间
+ transition-delay:2s;    发生过渡的延迟时间
+
+ float   浮动
+ 作用：让块元素横排排列
+ float:left;   从左往右排列
+ float:right;   从右往左排列
+ 浮动原理：让元素脱离文档流。让元素从文档层浮动到浮动层。（浮动层的层级大于文档层）
+ 文档流：标准情况下，页面元素从左往右从上到下依次排列。
+ 浮动引发的问题：浮动的子元素撑不开父元素       解决方式：（1）给父元素添加overflow:hidden;（超出部分隐藏）
+ （2）在父元素内容最后添加拥有清除浮动属性的元素。    clear:left/right/both;     清除左边浮动元素对此元素的影响   清除右边浮动元素对此元素的影响    清除两边浮动元素对此元素的影响 
+
+ box-sizing:border-box;   把边框的宽度包括在box中
+
+ 设置背景图  
+ background-image:ur1(图片位置)；
+ background-size: 100px auto;    宽度  高度
+ background-repeat:repeat/repeat-x/repeat-y/no-repeat;   重复  沿x轴重复   沿y轴重复  不重复
+ background-position: x轴值 y轴值;  可以为数值100px  100px      也可以为方位值 top/right/bottom/left/center  
+ background-origin:padding-box ;背景图开始渲染的位置   从padding位置开始渲染（默认值）
+                               border-box    从边框位置开始渲染
+                               content-box   从内容的位置开始渲染
+ background-clip:  ;  padding-box ;背景图结束渲染的位置   从padding位置结束渲染（默认值）
+                               border-box    从边框位置结束渲染
+                               content-box   从内容的位置结束渲染
+ background-attachment:fixed;    使得背景图加载到浏览器中
+ background-image:url(),url();       加载多个背景图    多个背景图的参数设置用，隔开
+
+ iconfont  查询图标网页
+
+border-radius()将边框设为圆弧
+
+3D效果
+perspective:**px;    定义3D场景（在父元素中定义）
+perspective-origin: xpx ypx;  定义观看角度
+transform-origin:left  center;  定义发生效果的依照位置
+transform-style:preserve-3d;  保持3d效果
+
+transform::translate3d(x轴偏移量，y轴偏移量)     transform:translatex()  定义X轴的偏移量
+				  rotate3d()  旋转     180deg
+				  scale3d()    缩放    scale(x轴缩放倍数 ，y轴缩放倍数)  1为原倍数      scale(2) x y同时缩放2倍
+				  skew3d()    斜切    skew()
