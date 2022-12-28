@@ -895,13 +895,13 @@ ALTER TABLE table_name primary key(id)
 删除主键
 alter table user drop
 添加唯一索引
-ALTER TABLE 'table_name' ADD UNIQUE('column')
+ALTER TABLE table_name ADD UNIQUE(column)
 添加全文索引
-ALTER TABLE 'table_name' ADD FULLTAXT('column')
+ALTER TABLE table_name ADD FULLTAXT(column)
 添加普通索引
-ALTER TABLE 'table_name' ADD INDEX('column')
+ALTER TABLE table_name ADD INDEX(column)
 删除索引
-ALTER TABLE 'table_name' drop index 列名
+ALTER TABLE table_name drop index 列名
 修改引擎
 ALTER TABLE my_table ENGINE=InnoDB
 show ENGINEs   查看mysql支持的所有引擎
